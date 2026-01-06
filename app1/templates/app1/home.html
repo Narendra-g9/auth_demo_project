@@ -1,0 +1,19 @@
+{% extends "app1/base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2 style="margin-bottom: 10px;">Welcome to the Authentication Demo</h2>
+<p>
+  This is a simple Django project on Authentication.
+</p>
+
+{% if not user.is_authenticated %}
+  <p style="margin-top: 20px;">
+    <a href="{% url 'login' %}" style="color: #0066ff; font-weight: bold;">Login</a> 
+    or 
+    <a href="{% url 'register' %}" style="color: #0066ff; font-weight: bold;">Register</a>
+    to get started.
+  </p>
+{% endif %}
+
+{% endblock %}

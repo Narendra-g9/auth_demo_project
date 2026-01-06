@@ -1,0 +1,22 @@
+{% extends "app1/base.html" %}
+{% block title %}Your Details{% endblock %}
+
+{% block content %}
+<h2 style="margin-bottom: 10px;">Account Details</h2>
+
+<p>Welcome, <strong>{{ request.user.username }}</strong> 👋</p>
+<p>Your account is authenticated successfully.</p>
+
+<p style="margin-top: 20px;">
+  <a href="{% url 'logout' %}" 
+    style="
+      padding: 8px 14px;
+      background: #ff4444;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    ">
+    Logout
+  </a>
+</p>
+{% endblock %}
